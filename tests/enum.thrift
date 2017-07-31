@@ -1,0 +1,7 @@
+enum SMSErrorCode {
+    UNKNOWN_ERROR = 0,
+    TOO_BUSY_ERROR = 1,
+    DATABASE_ERROR = 2,
+    EMPTY_MOBILE = 3,
+    INVALID_MOBILE = 4,
+}

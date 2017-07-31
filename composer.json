@@ -1,0 +1,24 @@
+{
+  "name": "zorrow/thrift-parser-php",
+  "description": "parse thrift file by php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "zorrow",
+      "email": "hzwangwenbo@126.com"
+    }
+  ],
+  "require": {
+
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.5",
+    "mockery/mockery": "^0.9.5"
+  },
+  "autoload":{
+    "psr-4":{
+       "Zorrow\\ThriftParser\\": "src/"
+    }
+  },
+  "prefer-stable": true
+}
