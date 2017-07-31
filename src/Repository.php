@@ -1,6 +1,6 @@
 <?php
 
-namespace Zorrow\ThriftParsert;
+namespace Zorrow\ThriftParser;
 
 use RuntimeException;
 
