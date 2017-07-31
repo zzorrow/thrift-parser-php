@@ -22,7 +22,6 @@ class TestThrift extends TestCase
 {
 
 
-
     public function testThriftParser()
     {
 
@@ -70,7 +69,9 @@ class TestThrift extends TestCase
         $parser->initSubject($thriftNamespace);
 
         $file = $parser->readThrift();
-        print_r($file);
+
+        $except = require "./exception/namespace.php";
+        $this->assertEquals($except, $file);
     }
 
     public function testConst()
@@ -84,7 +85,9 @@ class TestThrift extends TestCase
         $parser->initSubject($thriftConst);
 
         $file = $parser->readThrift();
-        print_r($file);
+
+        $except = require "./exception/const.php";
+        $this->assertEquals($except, $file);
     }
 
     public function testEnum()
@@ -98,7 +101,9 @@ class TestThrift extends TestCase
         $parser->initSubject($thriftEnum);
 
         $file = $parser->readThrift();
-        print_r($file);
+
+        $except = require "./exception/enum.php";
+        $this->assertEquals($except, $file);
     }
 
     public function testException()
@@ -112,7 +117,9 @@ class TestThrift extends TestCase
         $parser->initSubject($thriftExcep);
 
         $file = $parser->readThrift();
-        print_r($file);
+
+        $except = require "./exception/exception.php";
+        $this->assertEquals($except, $file);
     }
 
     public function testStruct()
@@ -126,7 +133,9 @@ class TestThrift extends TestCase
         $parser->initSubject($thriftStruct);
 
         $file = $parser->readThrift();
-        print_r($file);
+
+        $except = require "./exception/struct.php";
+        $this->assertEquals($except,$file);
     }
 
 
@@ -141,7 +150,9 @@ class TestThrift extends TestCase
         $parser->initSubject($thriftTypedef);
 
         $file = $parser->readThrift();
-        print_r($file);
+
+        $except = require './exception/typedef.php';
+        $this->assertEquals($except, $file);
     }
 
     public function testService()
@@ -155,7 +166,9 @@ class TestThrift extends TestCase
         $parser->initSubject($thriftService);
 
         $file = $parser->readThrift();
-        print_r($file);
+
+        $except = require "./exception/service.php";
+        $this->assertEquals($except,$file);
     }
 
 }
