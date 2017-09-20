@@ -75,4 +75,14 @@ class Repository
 
         throw new RuntimeException("service not defined in thrift file");
     }
+
+    public function isStruct($name)
+    {
+
+        if (is_string($name) && isset($this->dl['struct']) && (isset($this->dl['struct'][$name]))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
